@@ -1,0 +1,16 @@
+name: Emotion_Detection_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11.0
+  - pip
+  - ffmpeg
+  - opencv
+  - pip:
+      - numpy
+      - opencv-python
+      - keras
+      - fer
+      - pandas
+      - tensorflow
