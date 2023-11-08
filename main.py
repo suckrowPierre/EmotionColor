@@ -1,6 +1,5 @@
 import cv2
 from fer import FER
-import pandas as pd
 import numpy as np
 import emotion_to_color as e2c
 
@@ -47,7 +46,6 @@ def main():
     detector = FER(mtcnn=True)
     cap = cv2.VideoCapture(0)
     width, height = calculate_window_size(cap, DESIRED_WIDTH)
-    emotion_data = pd.DataFrame(columns=["Time"] + list(EMOTIONS_COLOR_MAP.keys()))
 
     while True:
         ret, frame = cap.read()
